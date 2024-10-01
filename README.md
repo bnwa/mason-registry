@@ -35,31 +35,9 @@ vim.lsp.start {
   root_dir = vim.fs.root(0, { 'config.fish' })
 }
 ```
-At the time of this writing, `nvim-lspconfig` has no entry for this LSP. However,
-you can extend the server mappings therein like so (instances of`fish_lsp` below
-can be replaced with whatever naming you prefer):
-```lua
-local configs = require('lspconfig.configs')
-configs.fish_lsp = {
-  default_config = {
-    vim.lsp.start {
-      cmd = { 'fish-language-server', 'start' }
-      name = 'fish_lsp',
-      root_dir = function()
-        return vim.fs.root(0, { 'config.fish' })
-      end
-    }
-  }
-}
-```
-Then evoke `nvim-lspconfig` as expected:
-```lua
-local lspconfig = require('lspconfig')
-lspconfig.fish_lsp.setup {}
-```
-`nvim-lspconfig` will detect the new entry and initialize the LSP like any other
-LSP currently found in its listing.
+Or fallback to `nvim-lspconfig` if you have that installed for client configuration instead
+of doing so yourself.
 
 Use of `nvim-lspconfig` in conjunction with `mason-lspconfig` is currently *not*
-supported at this time until proper PRs are merged for both `nvim-lspconfig`
-*and* `mason-lspconfig`.
+supported at this time until a PR is merged with `mason-lspconfig` to add `fish-lsp` to 
+its mapping.
