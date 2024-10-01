@@ -37,7 +37,3 @@ vim.lsp.start {
 ```
 Or fallback to `nvim-lspconfig` if you have that installed for client configuration instead
 of doing so yourself.
-
-Use of `nvim-lspconfig` in conjunction with `mason-lspconfig` is currently *not*
-supported at this time until a PR is merged with `mason-lspconfig` to add `fish-lsp` to 
-its mapping.
