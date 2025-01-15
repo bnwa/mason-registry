@@ -10,7 +10,7 @@ categories:
   - LSP
 source:
   # renovate:datasource=git-refs
-  id : pkg:github/ndonfris/fish-lsp@ed156da25f71d99af5f51ee5d94ea798080677df
+  id : pkg:github/ndonfris/fish-lsp@d3c4c7962b73b976db8d5e5bf28c2953024b1ceb
   build:
     run: npm exec 'yarn@1' install
 bin:
