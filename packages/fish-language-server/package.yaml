@@ -1,4 +1,4 @@
-name: fish-lsp
+name: fish_lsp
 description: LSP implementation for the fish shell language
 homepage: https://fish-lsp.dev
 licenses:
