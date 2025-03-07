@@ -13,4 +13,4 @@ source:
   build:
     run: npm exec 'yarn@1' install
 bin:
-  fish-lsp: node:bin/fish-lsp
+  fish-lsp: npm:fish-lsp
